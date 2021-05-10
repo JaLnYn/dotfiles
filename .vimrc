@@ -15,7 +15,7 @@ set wildmode=longest,list,full
 map <F2> :NERDTreeToggle<CR>
 
 call plug#begin()
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
