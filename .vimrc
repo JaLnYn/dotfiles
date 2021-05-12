@@ -4,9 +4,10 @@ set smartindent
 set ts=4 sw=4
 set clipboard=unnamed
 set incsearch
-set spell spelllang=en_ca
+" set spell spelllang=en_ca
 noremap! <C-?> <C-h>
 set wildmode=longest,list,full
+
 " install VimPlug and 
 " :source %
 " :PlugInstall
@@ -17,23 +18,17 @@ map <F2> :NERDTreeToggle<CR>
 call plug#begin()
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-"`Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
+Plug 'ervandew/supertab'
 Plug 'burntsushi/ripgrep'
 call plug#end()
 
 "don't forget to go to .vim/plugin/fzf and run install
 
-" use <tab> for trigger completion and navigate to the next complete item
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
+set complete+=kspell
+set completeopt=menuone,longest
 
-inoremap <silent><expr> <Tab>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<Tab>" :
-      \ coc#refresh()
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
