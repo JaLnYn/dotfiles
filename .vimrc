@@ -17,11 +17,12 @@ map <F2> :NERDTreeToggle<CR>
 call plug#begin()
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"`Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'burntsushi/ripgrep'
 call plug#end()
 
+"don't forget to go to .vim/plugin/fzf and run install
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
