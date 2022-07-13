@@ -1,4 +1,5 @@
 set number 
+set rnu
 syntax on
 set smartindent
 set ts=4 sw=4
@@ -18,9 +19,10 @@ map <F2> :NERDTreeToggle<CR>
 call plug#begin()
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'scrooloose/nerdtree'
 Plug 'ervandew/supertab'
 Plug 'burntsushi/ripgrep'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 "don't forget to go to .vim/plugin/fzf and run install
