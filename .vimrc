@@ -16,13 +16,18 @@ set wildmode=longest,list,full
 
 map <F2> :NERDTreeToggle<CR>
 
+function! Cond(cond, ...)
+  let opts = get(a:000, 0, {})
+  return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
+endfunction
+
 call plug#begin()
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'ervandew/supertab'
-Plug 'burntsushi/ripgrep'
+Plug 'junegunn/fzf', Cond(!exists('g:vscode'))
+Plug 'junegunn/fzf.vim', Cond(!exists('g:vscode'))
+Plug 'ervandew/supertab', Cond(!exists('g:vscode'))
+Plug 'burntsushi/ripgrep', Cond(!exists('g:vscode'))
 Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-surround'
+Plug 'tpope/vim-surround', Cond(!exists('g:vscode'))
 call plug#end()
 
 "don't forget to go to .vim/plugin/fzf and run install
