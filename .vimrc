@@ -3,7 +3,7 @@ set rnu
 syntax on
 set smartindent
 set ts=4 sw=4
-set clipboard=unnamed
+set clipboard=unnamedplus
 set incsearch
 " set spell spelllang=en_ca
 noremap! <C-?> <C-h>
