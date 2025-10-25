@@ -28,8 +28,6 @@ Plug 'junegunn/fzf.vim', Cond(!exists('g:vscode'))
 Plug 'ervandew/supertab', Cond(!exists('g:vscode'))
 Plug 'burntsushi/ripgrep', Cond(!exists('g:vscode'))
 Plug 'easymotion/vim-easymotion'
-Plug 'github/copilot.vim', Cond(!exists('g:vscode'))
-Plug 'prettier/vim-prettier', { 'do': 'npm install --frozen-lockfile --production' }
 Plug 'tpope/vim-surround', Cond(!exists('g:vscode'))
 call plug#end()
 
